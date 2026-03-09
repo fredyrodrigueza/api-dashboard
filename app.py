@@ -32,7 +32,7 @@ with col1:
 
 with col2:
     st.markdown("### 💡 Insights Accionables")
-    st.info("**Estabilidad vs Escala:** Shopify mantiene una tasa predecible en el tiempo, pero Mercado Libre experimentó un crecimiento explosivo de sincronizaciones desde Dic 2025.")
+    st.info("**Estabilidad vs Escala:** Shopify mantiene una tasa predecible en el tiempo, pero Mercado Libre experimentó un crecimiento explosivo de sincronizaciones desde Dic 2025.(Los datos de errores de conexión están disponibles a partir de noviembre 25)")
     st.warning("**Monitoreo Sugerido:** Establecer una alerta en Datadog/CloudWatch si la tasa de error global supera el umbral del 5% en una ventana de 1 hora.")
 
 st.divider()
@@ -101,3 +101,4 @@ with col_op2:
                         color='Cantidad', color_continuous_scale='Blues', template='plotly_white')
     st.plotly_chart(fig_ml_ops, use_container_width=True)
     st.info("**Impacto Mercado Libre:** La gran mayoría de bloqueos ocurren al sincronizar `items` (catálogo/stock), lo cual detona el Rate Limiting. Sin embargo, hay **9,880 facturas fallidas (`invoice`)**, un riesgo altísimo de retención que genera tickets de soporte.")
+
